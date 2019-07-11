@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <stdexcept>
-#include <fdb/fdb_c.h>
+#include <foundationdb/fdb_c.h>
 
 namespace fdb {
 
@@ -18,12 +18,10 @@ namespace fdb {
     if (code != 0) {
       std::string err(fdb_get_error(code));
       std::cout << "ERROR: " << err << std::endl;
-      if (fdb_error_predicate(FDB_ERROR_PREDICATE_RETRYABLE, code)) {
-        return true;
-      }
       return false;
     }
     return true;
   }
 
+  
 }

@@ -3,8 +3,8 @@
 int
 main(int argc, char** argv)
 {
-  fdb::network network;
-  fdb::database db;
+  fdb::api api;
+  fdb::database::ptr db = api.open();
   
   return 0;
 }

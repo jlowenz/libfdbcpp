@@ -7,8 +7,9 @@ include_directories(include)
 
 add_library(fdbc++ SHARED
   src/network.cpp
-  src/database.cpp)
+  src/database.cpp
+  src/options.cpp)
 
 add_executable(simple_test
   src/main.cpp)
-target_link_libraries(simple_test fdbcpp fdb_c pthread m rt) # add in the C FDB API library
+target_link_libraries(simple_test fdbc++ fdb_c pthread m rt) # add in the C FDB API library
