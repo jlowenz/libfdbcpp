@@ -7,6 +7,7 @@ include_directories(include)
 
 add_library(fdbc++ SHARED
   src/network.cpp
+  src/fdb.cpp
   src/database.cpp
   src/options.cpp)
 

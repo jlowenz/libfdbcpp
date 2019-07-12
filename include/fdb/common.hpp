@@ -8,7 +8,7 @@
 
 namespace fdb {
 
-  struct exception : std::runtime_error {
+  struct exception : public std::runtime_error {
     using std::runtime_error::runtime_error;
   };
   

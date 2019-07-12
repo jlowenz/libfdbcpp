@@ -5,6 +5,7 @@ namespace fdb {
 
   database::database()
   {
+    
   }
   database::database(const std::string& cluster_cfg)
   {
